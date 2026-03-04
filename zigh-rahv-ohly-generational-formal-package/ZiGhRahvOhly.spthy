@@ -1,0 +1,29 @@
+theory ZiGhRahvOhly
+
+begin
+
+builtins: symmetric-encryption
+
+functions:
+  ZiGh/2, Rahv/2, Ohly/3
+
+rule ZiGh_Layer:
+  [ Fr(x), Fr(salt) ]
+  -->
+  [ ZiGh(x, salt) ]
+
+rule Rahv_Layer:
+  [ ZiGh(x, salt), Fr(k) ]
+  -->
+  [ Rahv(ZiGh(x, salt), k) ]
+
+rule Ohly_Layer:
+  [ Rahv(x, k), Fr(w) ]
+  -->
+  [ Ohly(Rahv(x, k), x, w) ]
+
+lemma secrecy:
+  "All x k w #i.
+    Ohly(x,k,w) @ i ==> not(Ex #j. K(x) @ j)"
+
+end
