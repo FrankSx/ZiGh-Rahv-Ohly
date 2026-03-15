@@ -1,0 +1,9 @@
+{
+  "name": "zigh-rahv-ohly",
+  "version": "0.1.0",
+  "description": "Topological geometry computation framework",
+  "main": "engine/zigh.js",
+  "scripts": {
+    "extract": "node engine/zigh.js examples/sample.svg"
+  }
+}

@@ -1,64 +1,62 @@
+
 # ZiGh · Rahv · Ohly
-## A Composable Cryptographic Architecture
-### Legacy Edition — Long-Term Repository
 
-**Author:** Frank (FrankSx)  
-**Version:** 1.3  
-**Last Updated:** 2026-03-04  
-**License:** Apache License 2.0
+A research framework exploring **geometric topology as computation**.
 
----
+This repository implements the core pipeline:
 
-## Dedication
+SVG Geometry → ZiGh → Braid Extraction → Rahv → Braid Evolution → Ohly → Topological Invariants
 
-This repository permanently records a compositional cryptographic structure
-named in honor of three children who gave their father the time required to build.
+## Core Idea
 
-The identifiers ZiGh, Rahv, and Ohly are symbolic function names.
-They contain no hidden data, no steganographic channels, and no covert logic.
-They are formal identifiers embedded into a reduction-sound architecture.
+Geometric curves can be interpreted as strands evolving in time. When curves cross,
+they form braid generators. These braids can be evolved and analyzed using topology
+and knot invariants.
 
----
+The system explores whether geometric interaction can produce invariant structures
+useful for cryptography, physics simulation, and visual computation.
 
-## Architectural Overview
+## Operators
 
-The framework consists of three composable layers:
+ZiGh  
+Extracts braid words from geometric systems.
 
-1. ZiGh(·) — Entropy Conditioning
-2. Rahv(·) — Nonlinear Spectral Mixing
-3. Ohly(·) — Temporal Cost Binding
+Rahv  
+Evolves braid structures under rule systems.
 
-Composed form:
+Ohly  
+Computes topological invariants.
 
-    K = Ohly(Rahv(ZiGh(input)))
+## Quick Start
 
-Security reduces to the standard assumptions of:
-- HMAC
-- HKDF
-- AES
-- PBKDF2
+Install dependencies:
 
----
+```
+npm install
+```
 
-## Long-Term Maintenance Principles
+Run braid extraction on an SVG:
 
-This repository is designed to remain usable for decades.
+```
+node engine/zigh.js examples/sample.svg
+```
 
-Future maintainers should:
-- Replace primitives as cryptographic standards evolve.
-- Preserve domain separation.
-- Preserve reduction arguments.
-- Document all changes in CHANGELOG.md.
-- Maintain backward compatibility where feasible.
+Output example:
 
----
+```
+σ1 σ2 σ1⁻¹ σ3
+```
 
-## Citation
+## Repository Structure
 
-See CITATION.cff for academic referencing metadata.
+```
+docs/          theory and experiment design
+engine/        core operators
+visual/        simple topology viewer
+examples/      example SVG geometries
+proofs/        formal verification scaffolding
+```
 
----
+## Status
 
-## Security Reporting
-
-See SECURITY.md for responsible disclosure procedures.
+Research prototype.
